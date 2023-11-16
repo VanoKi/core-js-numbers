@@ -255,8 +255,13 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(index) {
+  const fib = [0, 1];
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < index; i++) {
+    fib.push(fib[i] + fib[i + 1]);
+  }
+  return fib[index];
 }
 
 /**
