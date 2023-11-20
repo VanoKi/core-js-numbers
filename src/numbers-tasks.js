@@ -315,8 +315,14 @@ function getSumOfDigits(n) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  while (num > 1) {
+    // eslint-disable-next-line no-param-reassign
+    if (num % 2 !== 0) return false;
+    // eslint-disable-next-line no-param-reassign
+    num /= 2;
+  }
+  return true;
 }
 
 /**
